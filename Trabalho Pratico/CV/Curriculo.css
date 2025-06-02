@@ -1,0 +1,146 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Paleta de cores */
+:root {
+  --cor-principal: #2c3e50;
+  --cor-secundaria: #ecf0f1;
+  --cor-destaque: #3498db;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principal);
+  padding-top: 60px; /* Espaço pro menu fixo */
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--cor-principal);
+  margin-bottom: 10px;
+}
+
+
+/* Navegação */
+nav {
+  background-color: var(--cor-principal);
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: var(--cor-destaque);
+}
+
+/* Seções */
+section {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.educacao-item,
+.certificacao-item,
+.experiencia-item {
+  margin-bottom: 20px;
+  border-left: 4px solid var(--cor-destaque);
+  padding-left: 15px;
+}
+
+/* Lista de habilidades */
+#habilidades ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cor-principal);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+footer li {
+  margin: 0 10px;
+}
+
+footer a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  section img {
+    display: block;
+    margin: 10px auto;
+  }
+
+  #apresentacao {
+    text-align: center;
+  }
+
+  footer ul {
+    flex-direction: column;
+  }
+}
